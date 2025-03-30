@@ -3,7 +3,7 @@ import os
 
 # 初始化 OpenAI 客户端
 # 使用阿里云 DashScope 的兼容模式 API
-client = OpenAI(api_key="sk-882e296067b744289acf27e6e20f3ec0",
+client = OpenAI(api_key=os.getenv("DASHSCOPE_API_KEY"),
                 base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")
 
 # 初始化变量用于存储模型的推理内容和最终回答内容
